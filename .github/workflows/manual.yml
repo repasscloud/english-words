@@ -9,5 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Clean words.txt
-      run: sed -i '' -E '/^[^A-Za-z0-9]|^[A-Z]|(.)\1\1/d' words.txt
+    - name: install tree
+      run: sudo apt -y update && sudo apt -y install tree
+    - name: tree
+      run: tree
