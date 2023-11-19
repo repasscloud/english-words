@@ -1,0 +1,13 @@
+name: Manual workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  clean:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clean words.txt
+      run: sed -i '' -E '/^[^A-Za-z0-9]|^[A-Z]|(.)\1\1/d' words.txt
